@@ -13,5 +13,3 @@ print(1+2*3/4)
 print('hellow world')
 pi=3.14
 print('asg'*5)
-a54456='g ;kmef'
-print(a55456*54)
