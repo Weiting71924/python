@@ -1,36 +1,16 @@
 """
-Topic:輸入三角形三邊，判斷是否能構成三角形，
-　　　是三角形則顯示面積和周長，不行則顯示，無法構成三角形:
+Topic:輸入溫度，如果溫度>=40度C,顯示: 太熱, 
+　　　如果溫度<= 10 顯示:太冷, 其他：舒適:
 ​
-Triangle Area formula: 
-p = 1/2 (a+b+c)
-area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
-​
-e.g.
-Show:a ="
-Input1:3
-​
-Show:b ="
-Input2:4
-​
-Show:c ="
-Input3:5
-​
-output:
-perimeter: 12.000000
-Area: 6.000000
+Show:Please input temperature:"
+Input1:40
+Output:It's too hot.
 """
 
-print("請輸入三角形三邊")
-a = float(input("\n其一:"))
-b = float(input("\n其二:"))
-c = float(input("\n其三:"))
-s = (a + b + c) * (1 / 2)
-perimeter=a+b+c
-area = (s * (s - a) * (s - b) * (s - c))**0.5
-if a+b-c > 0:
-    print("\n面積:{0:.3f}".format(area))
-    print("\n周長:{0:.2f}".format(perimeter))
+t = float(input("溫度(℃ ):"))
+if t >= 40:
+    print("\n太熱")
+elif t <= 10:
+    print("\n太冷")
 else:
-    print("\n數據錯誤")
-print("\n程式結束")
+    print("\n舒適")
