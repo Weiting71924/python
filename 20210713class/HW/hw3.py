@@ -4,7 +4,7 @@ t.pensize(3)
 t.turtlesize(0.5)
 t.pencolor("dodgerblue")
 t.stamp()
-for e in range(1,360,6):
+for e in range(0,360,6):
   t.speed(0)
   t.clear()
   t.forward(90)
