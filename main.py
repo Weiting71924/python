@@ -1,20 +1,14 @@
-a=int(input("請輸入箭頭大小:"))
-for i in range(1,a+1):
-  print(("*"*(2*i-1)).center(a*2-1))
-for s in range(a):
-  w=" "*(a-1)+"*"
-  print(w)
-
-
-
-
-# for r in range(1,a+1):
-#   val="0"*r
-#   print(val)
-# i=a-1
-# while i>=0:
-#   print("0"*i)
-#   i-=1
-# for f in range(1,a*2,2):
-#   t="*"*f
-#   print((t).center(a*2-1))
+import turtle as t
+t.shape("circle")
+t.pensize(3)
+t.turtlesize(0.5)
+t.pencolor("dodgerblue")
+t.stamp()
+for e in range(1,360,6):
+  t.speed(0)
+  t.clear()
+  t.forward(90)
+  t.home()
+  t.right(e)
+  import time
+  time.sleep(1)
