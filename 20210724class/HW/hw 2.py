@@ -9,3 +9,20 @@ for loop show list value
 "00000:00000:00000:00000:99999"  第五圈
 只能用一個list個
 '''
+l = "00000:00000:00000:00000:00000".split(':')
+for e in range(5):
+    l.pop(e - 1)
+    l.insert(e, '99999')
+    print(l)
+
+
+
+
+# l="00000:00000:00000:00000:00000".split(':')
+# l.pop()
+# l.insert(0,'99999')
+# print(l)
+# for i in range(4):
+#     l.pop()
+#     l.insert(0,'00000')
+#     print(l)
