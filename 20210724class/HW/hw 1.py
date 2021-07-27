@@ -3,13 +3,14 @@
 沒有str就加入list, 並顯示最後的list，list初使值為
 ["apple", "ball" ,"car"]
 '''
+
+
+
 l=["apple", "ball" ,"car"]
 while True:
   s=input("\n輸入一個單字:")
   if s in l:
-    l.remove(s)
-    print("已移除"+s)
-    print(l)
+    l.remove(s)    
   else:
     l.append(s)
-    print(l)
+  print(l)
