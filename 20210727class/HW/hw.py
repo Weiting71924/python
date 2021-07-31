@@ -4,3 +4,15 @@
 並使用function def 求最小公倍數
 value = lcm(num1, num2)
 '''
+
+# n1=input()
+# n2=input()
+
+
+
+
+
+
+
+
+
