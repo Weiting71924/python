@@ -19,29 +19,30 @@ def update_money(st):
 
 
 def fight(st):
-    print('\n遇到怪物')
     monsterHP=random.randint(2,10)
     p_att=random.randint(1,3)
     get_money=random.randint(10,20)
+    print('\n遇到怪物  HP:{}'.format(monsterHP))
     print('戰鬥開始!!!!')
-    while True:
+    
+    for u in range(8):
       time.sleep(1)
-      print('玩家攻擊，造成{}點傷害'.format(p_att))
+      print('\n玩家攻擊，造成{}點傷害'.format(p_att))
       monsterHP-=p_att
-      print('怪物攻擊')
-      st[1] -= 1
+      print('怪物剩餘HP:{}'.format(monsterHP))
       if monsterHP<=0:
-        print('擊敗怪物!!!')
+        print('\n擊敗怪物!!!')
         st[2]+=get_money
         print('獲得${}'.format(get_money, st[2]))
         return st
-        continue
-      else:
-        st[1]-=1
-        if st[1] <= 0:
-          st[0] = 0
+      print('\n怪物攻擊')
+      print('玩家剩餘HP:{}'.format(st[1]))
+      st[1]-=1
+      if st[1] <= 0:
+        st[0] = 0
         return st
-
+      else:
+        continue
 
 status = [1, 10, 0]
 func_list = [update_life, update_money, fight]
