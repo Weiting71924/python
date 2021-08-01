@@ -25,6 +25,7 @@ def fight(st):
     get_money=random.randint(10,20)
     print('戰鬥開始!!!!')
     while True:
+      time.sleep(1)
       print('玩家攻擊，造成{}點傷害'.format(p_att))
       monsterHP-=p_att
       print('怪物攻擊')
@@ -32,11 +33,14 @@ def fight(st):
       if monsterHP<=0:
         print('擊敗怪物!!!')
         st[2]+=get_money
+        print('獲得${}'.format(get_money, st[2]))
         return st
-        break
-      if st[1] <= 0:
+        continue
+      else:
+        st[1]-=1
+        if st[1] <= 0:
           st[0] = 0
-      return st
+        return st
 
 
 status = [1, 10, 0]
