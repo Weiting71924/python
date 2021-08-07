@@ -118,8 +118,8 @@ while True:
     print("玩家狀態 = {}".format(status))
     time.sleep(1.5)
     rfile(status)
-    A=input('是否存檔(y or n):')
-    if A=='y':
+    A=input('是否繼續遊戲(y or n):')
+    if A=='n':
        wfile(status)
        break
     else:
