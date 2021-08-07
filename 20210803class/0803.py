@@ -95,7 +95,19 @@ def fight(st):
       else:
         continue
 
+def rfile():
+    f = open("output", 'r')
+    st = []
+    for line in f:
+        st.append(int(line))
+    f.close()
+    return st
 
+def wfile(st):
+    f = open("output.txt", 'w')
+    for i in st:
+        f.write("{}\n".format(i))
+    f.close()
 
 status = [1, 10, 1000,10,0,0]#生死,HP,$$,MP,物攻,魔攻
 func_list = [update_life, update_money, fight,store]

@@ -95,15 +95,35 @@ def fight(st):
       else:
         continue
 
+def rfile(st):
+    f = open("output", 'r')
+    st = []
+    for line in f:
+        st.append(int(line))
+    f.close()
+    return st
+
+def wfile(st):
+    f = open("output", 'w')
+    for i in st:
+        f.write("{}\n".format(i))
+    f.close()
 
 
-status = [1, 10, 1000,10,0,0]#生死,HP,$$,MP,物攻,魔攻
+status = [1,10,1000,10,0,0]#生死,HP,$$,MP,物攻,魔攻
 func_list = [update_life, update_money, fight,store]
 while True:
     case = random.randrange(0, len(func_list))
     status = func_list[case](status)
     print("玩家狀態 = {}".format(status))
     time.sleep(1.5)
+    rfile(status)
+    A=input('是否存檔(y or n):')
+    if A=='y':
+       wfile(status)
+       break
+    else:
+      continue
     if status[0] == 0:
         print("Game Over !!")
         break
